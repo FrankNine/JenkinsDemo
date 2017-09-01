@@ -15,4 +15,15 @@ public class Builder {
 		};
 		BuildPipeline.BuildPlayer(buildPlayerOptions);
 	}
+
+	public static void BuildProjectiOS()
+	{
+		BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions{
+			scenes = UnityEditor.EditorBuildSettings.scenes.Select(s => s.path).ToArray(),
+			locationPathName = "./Xcode",
+			target = BuildTarget.iOS,
+			options = BuildOptions.None,
+		};
+		BuildPipeline.BuildPlayer(buildPlayerOptions);
+	}
 }
