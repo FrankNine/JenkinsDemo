@@ -6,7 +6,7 @@ public class Builder {
 	public static void BuildProjectAndroid()
 	{
 		BuildPipeline.BuildPlayer(UnityEditor.EditorBuildSettings.scenes, 
-			"artifacts/build.apk"), 
+			"artifacts/build.apk", 
 			BuildTarget.Android, BuildOptions.None);
 	}
 }
