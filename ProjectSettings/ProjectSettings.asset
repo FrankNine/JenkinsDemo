@@ -140,7 +140,7 @@ PlayerSettings:
     Android: com.turtle.ride
     iOS: com.turtle.ride
   buildNumber:
-    iOS: 1
+    iOS: 2
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
