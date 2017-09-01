@@ -9,7 +9,7 @@ public class Builder {
 	{
 		BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions{
 			scenes = UnityEditor.EditorBuildSettings.scenes.Select(s => s.path).ToArray(),
-			locationPathName = "./build.apk",
+			locationPathName = "./artifacts/build.apk",
 			target = BuildTarget.Android,
 			options = BuildOptions.None,
 		};
