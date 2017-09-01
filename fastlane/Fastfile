@@ -1,0 +1,32 @@
+fastlane_version "2.55.0"
+
+default_platform :ios
+
+platform :ios do
+  
+  lane :development do
+    sigh(
+      development: true
+    )
+    gym(
+      scheme: "Unity-iPhone",
+      export_method: "development",
+      output_name: "build.ipa"
+    )
+  end
+
+  lane :distribution do
+    sigh(
+      development: false
+    )
+    gym(
+      scheme: "Unity-iPhone",
+      export_method: "app-store",
+      output_name: "build.ipa"
+    )
+    deliver(
+     skip_screenshots: true,
+     skip_metadata: true
+    )
+  end
+end
